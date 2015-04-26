@@ -1,32 +1,133 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title>Hello World</title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1344.72">
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>Hello World</title>
+<meta name="Generator" content="Cocoa HTML Writer">
+<meta name="CocoaVersion" content="1344.72">
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+<meta name="viewport"
+	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+<link rel="stylesheet"
+	href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script
+	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
-    <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <p>Im Namen Allahs, des Gnädigen, des Immer Barmherzigen. Assalamo alaikum wwb.</p>
+<body>
+	<div class="app">
+		<div data-role="page" id="one">
 
-            <p>Farah Zeb</p>
-			<p> Das ist Zeile 43 </p>
-			<p> Bei mir klappt es jetzt auch :D</p>
-            <p>Ich schreibe in die Zeile 45</p>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+			<div data-role="header">
+				<h1>Quran mit deutscher Übersetzung</h1>
+			</div>
+			<!-- /header -->
+
+			<div role="main" class="ui-content">
+				<h2>Auswahlseite</h2>
+
+				<select name="select-choice-a" id="select-choice-a"
+					data-native-menu="false">
+					<option>Wähle eine Sura aus</option>
+					<option value="standard">Al Baqarah</option>
+					<option value="rush">Al Fateha</option>
+				</select>
+
+	<a href="#two" class="ui-btn ui-icon-check ui-btn-icon-left">OK</a>
+
+				<p>
+					<a href="#popup" class="ui-btn ui-shadow ui-corner-all"
+						data-rel="dialog" data-transition="pop">Show page "popup" (as
+						a dialog)</a>
+				</p>
+			</div>
+			<!-- /content -->
+
+			<div data-role="footer" data-theme="a">
+				<h4>Ahmadiyya Muslim Jamaat KdöR</h4>
+			</div>
+			<!-- /footer -->
+		</div>
+		<!-- /page one -->
+
+		<!-- Start of second page: #two -->
+		<div data-role="page" id="two" data-theme="a">
+
+			<div data-role="header">
+				<h1>Two</h1>
+			</div>
+			<!-- /header -->
+
+			<div role="main" class="ui-content">
+				<h2>Two</h2>
+				<p>I have an id of "two" on my page container. I'm the second
+					page container in this multi-page template.</p>
+				<p>
+					Notice that the theme is different for this page because we've
+					added a few
+					<code>data-theme</code>
+					swatch assigments here to show off how flexible it is. You can add
+					any content or widget to these pages, but we're keeping these
+					simple.
+				</p>
+				<p>
+					<a href="#one" data-direction="reverse"
+						class="ui-btn ui-shadow ui-corner-all ui-btn-b">Back to page
+						"one"</a>
+				</p>
+
+			</div>
+			<!-- /content -->
+
+			<div data-role="footer">
+				<h4>Page Footer</h4>
+			</div>
+			<!-- /footer -->
+		</div>
+		<!-- /page two -->
+
+		<!-- Start of third page: #popup -->
+		<div data-role="page" id="popup">
+
+			<div data-role="header" data-theme="b">
+				<h1>Dialog</h1>
+			</div>
+			<!-- /header -->
+
+			<div role="main" class="ui-content">
+				<h2>Popup</h2>
+				<p>
+					I have an id of "popup" on my page container and only look like a
+					dialog because the link to me had a
+					<code>data-rel="dialog"</code>
+					attribute which gives me this inset look and a
+					<code>data-transition="pop"</code>
+					attribute to change the transition to pop. Without this, I'd be
+					styled as a normal page.
+				</p>
+				<p>
+					<a href="#one" data-rel="back"
+						class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back
+						to page "one"</a>
+				</p>
+			</div>
+			<!-- /content -->
+
+			<div data-role="footer">
+				<h4>Ahmadiyya Muslim Jamaat KdöR</h4>
+			</div>
+			<!-- /footer -->
+		</div>
+		<!-- /page popup -->
+	</div>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript">
+		app.initialize();
+	</script>
+</body>
 
 </html>
