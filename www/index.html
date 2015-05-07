@@ -13,40 +13,43 @@
 	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 <link rel="stylesheet"
 	href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-	<link rel="stylesheet"
-	href="css/index.css" />
+<link rel="stylesheet" href="css/index.css" />
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script
 	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<script
-	src="js/index.js"></script>
-<script
-	src="js/script.js"></script>
+<script src="js/index.js"></script>
+<script src="js/script.js"></script>
 </head>
 <body>
 	<div class="app">
 		<div data-role="page" id="one">
 
 			<div data-role="header">
-				<h1>Quran mit deutscher Übersetzung</h1>
+				<h1>Der Heilige Quran</h1>
 			</div>
 			<!-- /header -->
 
 			<div role="main" class="ui-content">
-				<img id="logo" src="img/logo.png">
-
-				<select name="select-choice-a" id="select-choice-a"
+				<img id="logo" src="img/logo.png"> <select
+					name="select-choice-a" id="select-choice-a"
 					data-native-menu="false">
 					<option>Wähle eine Sura aus</option>
 				</select>
 
-	<a href="#two" class="ui-btn ui-icon-check ui-btn-icon-right">OK</a>
 
-				<p>
-					<a href="#popup" class="ui-btn ui-shadow ui-corner-all"
-						data-rel="dialog" data-transition="pop">Show page "popup" (as
-						a dialog)</a>
-				</p>
+				<fieldset data-role="controlgroup" data-type="horizontal">
+					<input name="radio-choice-h-2" id="radio-choice-h-2a" value="on" checked="checked" type="radio"> 
+					<label for="radio-choice-h-2a">Alle Verse</label> 
+ 					<input name="radio-choice-h-2" id="radio-choice-h-2b" value="off" type="radio"> 
+					<label for="radio-choice-h-2b">Ab Vers:</label>
+					<select
+						name="select-choice-b" id="select-choice-b" data-native-menu="false">
+					</select>
+					
+				</fieldset>
+
+				<a href="#two" data-transition="slide" class="ui-btn ui-icon-carat-r ui-btn-icon-right" id="ok">OK</a>
+
 			</div>
 			<!-- /content -->
 
@@ -61,33 +64,25 @@
 		<div data-role="page" id="two" data-theme="a">
 
 			<div data-role="header">
-				<h1>Two</h1>
+				<h1>Der Heilige Quran</h1>
 			</div>
 			<!-- /header -->
 
 			<div role="main" class="ui-content">
 				<h2>Two</h2>
-				<p>I have an id of "two" on my page container. I'm the second
-					page container in this multi-page template.</p>
 				<p>
-					Notice that the theme is different for this page because we've
-					added a few
-					<code>data-theme</code>
-					swatch assigments here to show off how flexible it is. You can add
-					any content or widget to these pages, but we're keeping these
-					simple.
+					hier kommt die Surat
 				</p>
 				<p>
-					<a href="#one" data-direction="reverse"
-						class="ui-btn ui-shadow ui-corner-all ui-btn-b">Back to page
-						"one"</a>
+					<a href="#one" data-rel="back"
+						class="ui-btn ui-shadow ui-corner-all ui-btn-b">Zurück</a>
 				</p>
 
 			</div>
 			<!-- /content -->
 
 			<div data-role="footer">
-				<h4>Page Footer</h4>
+				<h4>Ahmadiyya Muslim Jamaat KdöR</h4>
 			</div>
 			<!-- /footer -->
 		</div>
