@@ -63,3 +63,42 @@ function fillAyatMenu(ayat_no){
 	}
 	$("#select-choice-b").selectmenu("refresh");
 }
+
+
+//-----------------------------------------------------------------------------------
+
+function readSura(xml,ayat_no) {
+    $('#ok').click(function() {
+    
+    $(ayat) = [$("#select-choice-a").get()",".","$("#select-choice-b").get()];	//000.000 Surat.Ayat
+    
+    console.log($(ayat)); 
+    
+   for(i=1; i<=ayat_no; i++){
+   //Anzeige Ayat + Übersetzung abwechselnd
+   }
+   
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
