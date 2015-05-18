@@ -67,15 +67,12 @@ function fillAyatMenu(ayat_no){
 
 //-----------------------------------------------------------------------------------
 
-function readSura(xml,ayat_no) {
+function readSura(sura_no,ayat_no) {
     $('#ok').click(function() {
     
-    $(ayat) = [$("#select-choice-a").get()",".","$("#select-choice-b").get()];	//000.000 Surat.Ayat
-    
-    console.log($(ayat)); 
-    
-   for(i=1; i<=ayat_no; i++){
+     for(i=1; i<=ayat_no; i++){
    //Anzeige Ayat + Übersetzung abwechselnd
+   <img src ="C:\xampp\htdocs\QuranApp\www\img\test\001-001.png">
    }
    
     });
