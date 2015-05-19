@@ -18,11 +18,16 @@
  */
 
 
-#logo {
+img {
     display: block;
     margin: 1em auto 0;
+}
+
+#selectedSura, h2 {
+	text-align: center;
 }
 
 .blue{
 	background-color: #3388CC;
 }
+

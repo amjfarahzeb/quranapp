@@ -42,6 +42,34 @@ $(function() {
 			        	$("#select-choice-b").selectmenu("refresh");
 			        }
 			    });
+
+	 $('#ok').click(function() {
+	 	$("#selectedSura").empty();
+	 	$("#sura_name").empty();
+
+	 	var selected_sura_no = $('#select-choice-a').val();
+
+    	//if the value is 0
+	    if (selected_sura_no == '0'){
+	    	selected_sura_no = 1;
+	    }
+
+    	var selectedSura = $(xmlDoc).find('sura')[selected_sura_no-1];
+     	var ayaat = $(selectedSura).find('ayaat')[0];
+     	var name = $(selectedSura).find('name')[0];
+
+     	$("#sura_name").append(name);
+
+     	for(i=1; i<=$(ayaat).find('ayat').size();i++){
+     		var ayat = $(ayaat).find('ayat')[i-1];
+     		$("#selectedSura").append("<div id='ayat"+i+"'><img src='img/quranverses/"+addZeros(selected_sura_no)+"-"+addZeros(i)+".png'>"
+     			+"<p>"+$(ayat).find('ayat_no').text()+$(ayat).find('ayat_german').text()+"</p></div>");
+     	}
+     	
+	    $('html, body').animate({
+	        scrollTop: $("#ayat100").offset().top
+	    }, 2000);
+	});
 });
 
 function fillSuratMenu(xml){
@@ -50,7 +78,7 @@ function fillSuratMenu(xml){
 	 xmlDoc = xml;
 	$(xml).find('sura').each(function(){
 		sura_no = i+1;
-		$("#select-choice-a").append("<option id='"+$(this).attr("name")+"' value='"+i+"'>"+sura_no+": "+ $(this).find('name').text() +"</option>");
+		$("#select-choice-a").append("<option id='"+$(this).attr("name")+"' value='"+sura_no+"'>"+sura_no+": "+ $(this).find('name').text() +"</option>");
 		i++;
 	});        	
 	$("#select-choice-a").selectmenu("refresh");
@@ -64,19 +92,10 @@ function fillAyatMenu(ayat_no){
 	$("#select-choice-b").selectmenu("refresh");
 }
 
-
-//-----------------------------------------------------------------------------------
-
-function readSura(sura_no,ayat_no) {
-    $('#ok').click(function() {
-    
-     for(i=1; i<=ayat_no; i++){
-   //Anzeige Ayat + Übersetzung abwechselnd
-   <img src ="C:\xampp\htdocs\QuranApp\www\img\test\001-001.png">
-   }
-   
-    });
-});
+function addZeros(num) {
+  var zero = 3 - num.toString().length + 1;
+  return Array(+(zero > 0 && zero)).join("0") + num;
+}
 
 
 

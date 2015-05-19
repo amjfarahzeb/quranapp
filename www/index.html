@@ -33,7 +33,7 @@
 				<img id="logo" src="img/logo.png"> <select
 					name="select-choice-a" id="select-choice-a"
 					data-native-menu="false">
-					<option>Wähle eine Sura aus</option>
+					<option value="0">Wähle eine Sura aus</option>
 				</select>
 
 
@@ -69,38 +69,11 @@
 			<!-- /header -->
 
 			<div role="main" class="ui-content">
-				<h2>Two</h2>
-				
-				
-				<!--nano-->
-				
-				<script type= "text/javascript" src="script.js">
-        
-        		</script>  
-   			    <body>
-   			    <div>
-        		<?php
-        		
-        		$dir ="C:\xampp\htdocs\QuranApp\www\img\test";
-        		
-        		if ($opendir = opendir($dir))
-        		
-        			<img id= $opendir src=''><br>
-				?>
-        		</div>
-        		
-        		<div>
-        		<img id = $sura_no src ="C:\xampp\htdocs\QuranApp\www\img\test\001-001.png">
-        		</div>
-   			 	</body>
-				
-				
-				<!--nano-->
-				
-				
-				<p>
-					HIER KOMMT DIE SURAT HIN!!
-				</p>
+				<h2 id="sura_name"></h2>
+								
+				<div id="selectedSura">
+
+				</div>
 				<p>
 					<a href="#one" data-rel="back"
 						class="ui-btn ui-shadow ui-corner-all ui-btn-b">Zurück</a>
