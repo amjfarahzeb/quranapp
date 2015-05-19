@@ -63,12 +63,12 @@ $(function() {
      	for(i=1; i<=$(ayaat).find('ayat').size();i++){
      		var ayat = $(ayaat).find('ayat')[i-1];
      		$("#selectedSura").append("<div id='ayat"+i+"'><img src='img/quranverses/"+addZeros(selected_sura_no)+"-"+addZeros(i)+".png'>"
-     			+"<p>"+$(ayat).find('ayat_no').text()+$(ayat).find('ayat_german').text()+"</p></div>");
+     			+"<p>"+$(ayat).find('ayat_no').text()+" - "+$(ayat).find('ayat_german').text()+"</p></div>");
      	}
-     	
-	    $('html, body').animate({
-	        scrollTop: $("#ayat100").offset().top
-	    }, 2000);
+
+     	//falls "ab Vers .." ausgewählt wurde
+     	var anchor = $("#select-choice-b").val();
+     	//TO DO
 	});
 });
 
