@@ -88,7 +88,7 @@ $(function() {
 	 	$("#wholeQuran").empty();
 
 	 	var key = $(this).val();
-	 	if(key.length >= 7){
+	 	if(key.length >= 5){
 	 		$(xmlDoc).find("ayaat ayat_german:contains("+key+")").each(function(){
 	 			
 	 			var pNod = $(this).parent();
@@ -130,7 +130,6 @@ function addZeros(num) {
 }
 
 function seperateAyatNo(str) {
-	alert(str);
 	var arr = str.split(":");
   	return arr;
 }
