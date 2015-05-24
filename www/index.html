@@ -9,8 +9,7 @@
 <meta name="format-detection" content="telephone=no" />
 <meta name="msapplication-tap-highlight" content="no" />
 <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-<meta name="viewport"
-	content="user-scalable=0, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
 <link rel="stylesheet"
 	href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <link rel="stylesheet" href="css/index.css" />
@@ -24,12 +23,12 @@
 	<div class="app">
 		<div data-role="page" id="one">
 
-			<div data-role="header">
+			<div data-role="header" data-position="fixed">
 				<h1>Der Heilige Quran</h1>
 			</div>
 			<!-- /header -->
 
-			<div role="main" class="ui-content">
+			<div role="main" class="ui-content imgContPage">
 				<img id="logo" src="img/logo.png"> <select
 					name="select-choice-a" id="select-choice-a"
 					data-native-menu="false">
@@ -55,7 +54,7 @@
 			</div>
 			<!-- /content -->
 
-			<div data-role="footer" data-theme="a">
+			<div data-role="footer" data-theme="a" data-position="fixed">
 				<h4>Ahmadiyya Muslim Jamaat KdöR</h4>
 			</div>
 			<!-- /footer -->
@@ -65,12 +64,12 @@
 		<!-- Start of second page: #two -->
 		<div data-role="page" id="two" data-theme="a">
 
-			<div data-role="header">
+			<div data-role="header" data-position="fixed">
 				<h1>Der Heilige Quran</h1>
 			</div>
 			<!-- /header -->
 
-			<div role="main" class="ui-content">
+			<div role="main" class="ui-content imgContPage">
 	
 				<form class="ui-filterable">
 				    <input id="filterBasic-input" data-type="search">
@@ -88,7 +87,7 @@
 			</div>
 			<!-- /content -->
 
-			<div data-role="footer">
+			<div data-role="footer" data-position="fixed">
 				<h4>Ahmadiyya Muslim Jamaat KdöR</h4>
 			</div>
 			<!-- /footer -->
@@ -98,12 +97,12 @@
 		<!-- Start of third page: #three -->
 		<div data-role="page" id="three" data-theme="a">
 
-			<div data-role="header">
+			<div data-role="header" data-position="fixed">
 				<h1>Der Heilige Quran</h1>
 			</div>
 			<!-- /header -->
 
-			<div role="main" class="ui-content">
+			<div role="main" class="ui-content imgContPage">
 				<input type="text" name="search" id="search" value="" class="ui-btn ui-icon-carat-r ui-btn-icon-search" placeholder="Suchbegriff eingeben..."/>
 				
 				<h2>Treffer:</h2>
@@ -119,7 +118,7 @@
 			</div>
 			<!-- /content -->
 
-			<div data-role="footer">
+			<div data-role="footer" data-position="fixed">
 				<h4>Ahmadiyya Muslim Jamaat KdöR</h4>
 			</div>
 			<!-- /footer -->
