@@ -1,6 +1,14 @@
 var xmlDoc = 0;
 
-$(function() {	
+$(function() {
+	//jQuery function contain overwritten because it was case sensitive
+	$.expr[":"].contains = $.expr.createPseudo(function(arg) {
+	    return function( elem ) {
+	        return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+	    };
+	});
+
+	//disable verses
 	$('#select-choice-b').selectmenu('disable');
 	$("input[type='radio']").checkboxradio('disable');
 	
@@ -21,7 +29,7 @@ $(function() {
 	 $('#select-choice-a').on('change', function () {
 		 //get the sura name value and set the second select menu of verses 
 		    var $this = $(this);
-		    var selectedSura = $(xmlDoc).find('sura')[$this.val()];
+		    var selectedSura = $(xmlDoc).find('sura')[$this.val()-1];
          	var ayaat = $(selectedSura).find('ayaat')[0];         	
          	var ayat_no = $(ayaat).find('ayat').size();
          	
@@ -31,6 +39,7 @@ $(function() {
          	$("input[type='radio']").checkboxradio('enable');
 		});
 	 
+	 //regelt das enablen disablen von vers menu
 	 $('input:radio[name="radio-choice-h-2"]').change(
 			    function(){
 			        if (this.checked && this.value == 'off') {
@@ -42,7 +51,7 @@ $(function() {
 			        	$("#select-choice-b").selectmenu("refresh");
 			        }
 			    });
-
+	 //opens the selected sura page
 	 $('#ok').click(function() {
 	 	$("#selectedSura").empty();
 	 	$("#sura_name").empty();
@@ -66,10 +75,32 @@ $(function() {
      			+"<p>"+$(ayat).find('ayat_no').text()+" - "+$(ayat).find('ayat_german').text()+"</p></div>");
      	}
 
+     	window.location.href='#two';
      	//falls "ab Vers .." ausgewählt wurde
      	var anchor = $("#select-choice-b").val();
-     	//TO DO
+     	if(anchor != 1){
+     		setTimeout(function(){ $.mobile.silentScroll($("#ayat"+anchor).offset().top); }, 1500);
+     	}
 	});
+	
+	//triggers the third page for searching
+	 $('#search').keyup(function() {
+	 	$("#wholeQuran").empty();
+
+	 	var key = $(this).val();
+	 	if(key.length >= 7){
+	 		$(xmlDoc).find("ayaat ayat_german:contains("+key+")").each(function(){
+	 			
+	 			var pNod = $(this).parent();
+ 				
+ 					var arr = seperateAyatNo($(pNod).find("ayat_no").text());
+					$("#wholeQuran").append("<div><img src='img/quranverses/"+addZeros(arr[0])+"-"+addZeros(arr[1])+".png'>"
+		      			+"<p>"+$(pNod).find("ayat_no").text()+" - "+$(pNod).find('ayat_german').text()+"</p></div>");
+ 							
+	 		});
+	 	}
+    });
+	
 });
 
 function fillSuratMenu(xml){
@@ -92,12 +123,17 @@ function fillAyatMenu(ayat_no){
 	$("#select-choice-b").selectmenu("refresh");
 }
 
+//helper functions
 function addZeros(num) {
   var zero = 3 - num.toString().length + 1;
   return Array(+(zero > 0 && zero)).join("0") + num;
 }
 
-
+function seperateAyatNo(str) {
+	alert(str);
+	var arr = str.split(":");
+  	return arr;
+}
 
 
 

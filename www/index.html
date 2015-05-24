@@ -10,7 +10,7 @@
 <meta name="msapplication-tap-highlight" content="no" />
 <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
 <meta name="viewport"
-	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	content="user-scalable=0, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 <link rel="stylesheet"
 	href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <link rel="stylesheet" href="css/index.css" />
@@ -48,7 +48,9 @@
 					
 				</fieldset>
 
-				<a href="#two" data-transition="slide" class="ui-btn ui-icon-carat-r ui-btn-icon-right" id="ok">OK</a>
+				<a href="#" data-transition="slide" class="ui-btn ui-icon-carat-r ui-btn-icon-check" id="ok">OK</a>
+
+				<a href="#three" data-transition="slide" class="ui-btn ui-icon-carat-r ui-btn-icon-search">Suche</a>
 
 			</div>
 			<!-- /content -->
@@ -92,6 +94,37 @@
 			<!-- /footer -->
 		</div>
 		<!-- /page two -->
+
+		<!-- Start of third page: #three -->
+		<div data-role="page" id="three" data-theme="a">
+
+			<div data-role="header">
+				<h1>Der Heilige Quran</h1>
+			</div>
+			<!-- /header -->
+
+			<div role="main" class="ui-content">
+				<input type="text" name="search" id="search" value="" class="ui-btn ui-icon-carat-r ui-btn-icon-search" placeholder="Suchbegriff eingeben..."/>
+				
+				<h2>Treffer:</h2>
+								
+				<div id="wholeQuran">
+				</div>
+
+				<p>
+					<a href="#one" data-rel="back"
+						class="ui-btn ui-shadow ui-corner-all ui-btn-b">Zurück</a>
+				</p>
+
+			</div>
+			<!-- /content -->
+
+			<div data-role="footer">
+				<h4>Ahmadiyya Muslim Jamaat KdöR</h4>
+			</div>
+			<!-- /footer -->
+		</div>
+		<!-- /page three -->
 
 		<!-- Start of third page: #popup -->
 		<div data-role="page" id="popup">
