@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0AF8EAC6-11D8-47DE-8B01-EB755E173CB3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HelloWorld</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D7D6A96EB6CCDA23845781B9DA4AF57AA7D1EF62</key>
+		<string>https://github.com/amjfarahzeb/quranapp/</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>hello/platforms/ios/HelloWorld.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D7D6A96EB6CCDA23845781B9DA4AF57AA7D1EF62</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/amjfarahzeb/quranapp/</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D7D6A96EB6CCDA23845781B9DA4AF57AA7D1EF62</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D7D6A96EB6CCDA23845781B9DA4AF57AA7D1EF62</string>
+			<key>IDESourceControlWCCName</key>
+			<string>quranapp</string>
+		</dict>
+	</array>
+</dict>
+</plist>
