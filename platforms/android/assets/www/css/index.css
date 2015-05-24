@@ -21,13 +21,22 @@
 img {
     display: block;
     margin: 1em auto 0;
+    max-width: 100%;
 }
 
 #selectedSura, h2, #wholeQuran {
 	text-align: center;
+	padding: 5px;
 }
 
 .blue{
 	background-color: #3388CC;
 }
 
+.ui-content {
+	padding:0px !important;
+}
+
+input {
+    -webkit-user-select: auto !important;
+}

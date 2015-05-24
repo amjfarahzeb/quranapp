@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>Hello World</title>
+<meta name="Generator" content="Cocoa HTML Writer">
+<meta name="CocoaVersion" content="1344.72">
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+<<<<<<< HEAD
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+=======
+<meta name="viewport"
+	content="user-scalable=0, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+>>>>>>> 25a882424b4eff000f848d25a22ad65e25413a10
+<link rel="stylesheet"
+	href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<link rel="stylesheet" href="css/index.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script
+	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/script.js"></script>
+</head>
+<body>
+	<div class="app">
+		<div data-role="page" id="one">
+
+<<<<<<< HEAD
+			<div data-role="header" data-position="fixed">
+=======
+			<div data-role="header">
+>>>>>>> 25a882424b4eff000f848d25a22ad65e25413a10
+				<h1>Der Heilige Quran</h1>
+			</div>
+			<!-- /header -->
+
+<<<<<<< HEAD
+			<div role="main" class="ui-content imgContPage">
+=======
+			<div role="main" class="ui-content">
+>>>>>>> 25a882424b4eff000f848d25a22ad65e25413a10
+				<img id="logo" src="img/logo.png"> <select
+					name="select-choice-a" id="select-choice-a"
+					data-native-menu="false">
+					<option value="0">Wähle eine Sura aus</option>
+				</select>
+
+
+				<fieldset data-role="controlgroup" data-type="horizontal">
+					<input name="radio-choice-h-2" id="radio-choice-h-2a" value="on" checked="checked" type="radio"> 
+					<label for="radio-choice-h-2a">Alle Verse</label> 
+ 					<input name="radio-choice-h-2" id="radio-choice-h-2b" value="off" type="radio"> 
+					<label for="radio-choice-h-2b">Ab Vers:</label>
+					<select
+						name="select-choice-b" id="select-choice-b" data-native-menu="false">
+					</select>
+					
+				</fieldset>
+
+				<a href="#" data-transition="slide" class="ui-btn ui-icon-carat-r ui-btn-icon-check" id="ok">OK</a>
+
+				<a href="#three" data-transition="slide" class="ui-btn ui-icon-carat-r ui-btn-icon-search">Suche</a>
+
+			</div>
+			<!-- /content -->
+
+<<<<<<< HEAD
+			<div data-role="footer" data-theme="a" data-position="fixed">
+=======
+			<div data-role="footer" data-theme="a">
+>>>>>>> 25a882424b4eff000f848d25a22ad65e25413a10
+				<h4>Ahmadiyya Muslim Jamaat KdöR</h4>
+			</div>
+			<!-- /footer -->
+		</div>
+		<!-- /page one -->
+
+		<!-- Start of second page: #two -->
+		<div data-role="page" id="two" data-theme="a">
+
+<<<<<<< HEAD
+			<div data-role="header" data-position="fixed">
+=======
+			<div data-role="header">
+>>>>>>> 25a882424b4eff000f848d25a22ad65e25413a10
+				<h1>Der Heilige Quran</h1>
+			</div>
+			<!-- /header -->
+
+<<<<<<< HEAD
+			<div role="main" class="ui-content imgContPage">
+=======
+			<div role="main" class="ui-content">
+>>>>>>> 25a882424b4eff000f848d25a22ad65e25413a10
+	
+				<form class="ui-filterable">
+				    <input id="filterBasic-input" data-type="search">
+				</form>
+				<h2 id="sura_name"></h2>
+								
+				<div id="selectedSura" data-filter="true" data-input="#filterBasic-input">
+
+				</div>
+				<p>
+					<a href="#one" data-rel="back"
+						class="ui-btn ui-shadow ui-corner-all ui-btn-b">Zurück</a>
+				</p>
+
+			</div>
+			<!-- /content -->
+
+<<<<<<< HEAD
+			<div data-role="footer" data-position="fixed">
+=======
+			<div data-role="footer">
+>>>>>>> 25a882424b4eff000f848d25a22ad65e25413a10
+				<h4>Ahmadiyya Muslim Jamaat KdöR</h4>
+			</div>
+			<!-- /footer -->
+		</div>
+		<!-- /page two -->
+
+		<!-- Start of third page: #three -->
+		<div data-role="page" id="three" data-theme="a">
+
+<<<<<<< HEAD
+			<div data-role="header" data-position="fixed">
+=======
+			<div data-role="header">
+>>>>>>> 25a882424b4eff000f848d25a22ad65e25413a10
+				<h1>Der Heilige Quran</h1>
+			</div>
+			<!-- /header -->
+
+<<<<<<< HEAD
+			<div role="main" class="ui-content imgContPage">
+=======
+			<div role="main" class="ui-content">
+>>>>>>> 25a882424b4eff000f848d25a22ad65e25413a10
+				<input type="text" name="search" id="search" value="" class="ui-btn ui-icon-carat-r ui-btn-icon-search" placeholder="Suchbegriff eingeben..."/>
+				
+				<h2>Treffer:</h2>
+								
+				<div id="wholeQuran">
+				</div>
+
+				<p>
+					<a href="#one" data-rel="back"
+						class="ui-btn ui-shadow ui-corner-all ui-btn-b">Zurück</a>
+				</p>
+
+			</div>
+			<!-- /content -->
+
+<<<<<<< HEAD
+			<div data-role="footer" data-position="fixed">
+=======
+			<div data-role="footer">
+>>>>>>> 25a882424b4eff000f848d25a22ad65e25413a10
+				<h4>Ahmadiyya Muslim Jamaat KdöR</h4>
+			</div>
+			<!-- /footer -->
+		</div>
+		<!-- /page three -->
+
+		<!-- Start of third page: #popup -->
+		<div data-role="page" id="popup">
+
+			<div data-role="header" data-theme="b">
+				<h1>Dialog</h1>
+			</div>
+			<!-- /header -->
+
+			<div role="main" class="ui-content">
+				<h2>Popup</h2>
+				<p>
+					I have an id of "popup" on my page container and only look like a
+					dialog because the link to me had a
+					<code>data-rel="dialog"</code>
+					attribute which gives me this inset look and a
+					<code>data-transition="pop"</code>
+					attribute to change the transition to pop. Without this, I'd be
+					styled as a normal page.
+				</p>
+				<p>
+					<a href="#one" data-rel="back"
+						class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back
+						to page "one"</a>
+				</p>
+			</div>
+			<!-- /content -->
+
+			<div data-role="footer">
+				<h4>Ahmadiyya Muslim Jamaat KdöR</h4>
+			</div>
+			<!-- /footer -->
+		</div>
+		<!-- /page popup -->
+	</div>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript">
+		app.initialize();
+	</script>
+</body>
+
+</html>
