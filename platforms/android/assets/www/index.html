@@ -25,11 +25,15 @@
 
 			<div data-role="header" data-position="fixed">
 				<h1>Der Heilige Quran</h1>
+				<a href="#mail" data-role="button" data-icon="info" data-iconshadow="true" data-direction="reverse" data-transition="fade" data-iconpos="notext" data-theme="b" class="ui-btn-left">home</a>
 			</div>
 			<!-- /header -->
 
 			<div role="main" class="ui-content imgContPage">
-				<img id="logo" src="img/logo.png"> <select
+				<center>
+					<img id="logo" src="img/logo.png">
+				</center> 
+				<select
 					name="select-choice-a" id="select-choice-a"
 					data-native-menu="false">
 					<option value="0">Wähle eine Sura aus</option>
@@ -47,9 +51,9 @@
 					
 				</fieldset>
 
-				<a href="#" data-transition="slide" class="ui-btn ui-icon-carat-r ui-btn-icon-check" id="ok">OK</a>
+				<a href="#" data-transition="fade" data-theme="b" class="ui-btn ui-icon-carat-r ui-btn-icon-check" id="ok">OK</a>
 
-				<a href="#three" data-transition="slide" class="ui-btn ui-icon-carat-r ui-btn-icon-search">Suche</a>
+				<a href="#three" data-transition="fade" class="ui-btn ui-icon-carat-r ui-btn-icon-search">Suche</a>
 
 			</div>
 			<!-- /content -->
@@ -65,30 +69,30 @@
 		<div data-role="page" id="two" data-theme="a">
 
 			<div data-role="header" data-position="fixed">
+				<a href="#one" data-role="button" data-icon="home" data-iconshadow="true" data-direction="reverse" data-transition="fade" data-iconpos="notext" data-theme="b" class="ui-btn-left">home</a>
 				<h1>Der Heilige Quran</h1>
+				<form class="ui-filterable">
+				    <input id="filterBasic-input" data-type="search" placeholder="Suchbegriff eingeben...">
+				</form>
 			</div>
 			<!-- /header -->
 
 			<div role="main" class="ui-content imgContPage">
 	
-				<form class="ui-filterable">
-				    <input id="filterBasic-input" data-type="search">
-				</form>
+				
 				<h2 id="sura_name"></h2>
 								
 				<div id="selectedSura" data-filter="true" data-input="#filterBasic-input">
 
 				</div>
-				<p>
-					<a href="#one" data-rel="back"
-						class="ui-btn ui-shadow ui-corner-all ui-btn-b">Zurück</a>
-				</p>
 
 			</div>
 			<!-- /content -->
 
 			<div data-role="footer" data-position="fixed">
+				<a href="#" data-role="button" data-icon="carat-l" data-rel="back" data-iconshadow="true" data-direction="reverse" data-transition="fade" data-iconpos="notext" data-theme="b" class="ui-btn-left">back</a>
 				<h4>Ahmadiyya Muslim Jamaat KdöR</h4>
+				<a href="#" onclick="$.mobile.silentScroll(0)" data-role="button" data-icon="carat-u" data-iconshadow="true" data-transition="fade" data-iconpos="notext" data-theme="b" class="ui-btn-right">top</a>
 			</div>
 			<!-- /footer -->
 		</div>
@@ -98,56 +102,57 @@
 		<div data-role="page" id="three" data-theme="a">
 
 			<div data-role="header" data-position="fixed">
+				<a href="#one" data-role="button" data-icon="home" data-iconshadow="true" data-direction="reverse" data-transition="fade" data-iconpos="notext" data-theme="b" class="ui-btn-left">home</a>
 				<h1>Der Heilige Quran</h1>
 			</div>
 			<!-- /header -->
 
 			<div role="main" class="ui-content imgContPage">
 				<input type="text" name="search" id="search" value="" class="ui-btn ui-icon-carat-r ui-btn-icon-search" placeholder="Suchbegriff eingeben..."/>
-				
-				<h2>Treffer:</h2>
 								
 				<div id="wholeQuran">
 				</div>
-
-				<p>
-					<a href="#one" data-rel="back"
-						class="ui-btn ui-shadow ui-corner-all ui-btn-b">Zurück</a>
-				</p>
 
 			</div>
 			<!-- /content -->
 
 			<div data-role="footer" data-position="fixed">
+				<a href="#" data-role="button" data-icon="carat-l" data-rel="back" data-iconshadow="true" data-direction="reverse" data-transition="fade" data-iconpos="notext" data-theme="b" class="ui-btn-left">back</a>
 				<h4>Ahmadiyya Muslim Jamaat KdöR</h4>
+				<a href="#" onclick="$.mobile.silentScroll(0)" data-role="button" data-icon="carat-u" data-iconshadow="true" data-transition="fade" data-iconpos="notext" data-theme="b" class="ui-btn-right">top</a>
 			</div>
 			<!-- /footer -->
 		</div>
 		<!-- /page three -->
 
 		<!-- Start of third page: #popup -->
-		<div data-role="page" id="popup">
+		<div data-role="page" id="mail">
 
 			<div data-role="header" data-theme="b">
-				<h1>Dialog</h1>
+				<a href="#one" data-role="button" data-icon="home" data-iconshadow="true" data-direction="reverse" data-transition="fade" data-iconpos="notext" data-theme="b" class="ui-btn-left">home</a>
+				<h1>Information</h1>
 			</div>
 			<!-- /header -->
 
 			<div role="main" class="ui-content">
-				<h2>Popup</h2>
+				<h2>Kontakt</h2>
 				<p>
-					I have an id of "popup" on my page container and only look like a
-					dialog because the link to me had a
-					<code>data-rel="dialog"</code>
-					attribute which gives me this inset look and a
-					<code>data-transition="pop"</code>
-					attribute to change the transition to pop. Without this, I'd be
-					styled as a normal page.
+					Diese Quran-App mit deutscher Übersetzung wurde bereitgestellt von der Ahmadiyya Muslim Jamaat KdöR. Für allgemeine Fragen oder Anregungen bezüglich dieser App können Sie uns eine E-Mail schreiben oder anrufen: 
+				</p>
+				<ul data-role="listview" data-theme="b">
+		          <li class="ui-icon-mail ui-btn-icon-left"><a href="mailto:kontakt@ahmadiyya.de">Email an kontakt@ahmadiyya.de</a></li>
+		          <li class="ui-icon-phone ui-btn-icon-left"><a href="tel:08002107758">Anruf (kostenlose Hotline):  0800 210 77 58</a></li>
+		        </ul>
+		        <h2>Ahmadiyya Muslim Jamaat (AMJ)</h2>
+				<p>
+					In der heutigen religiösen Welt spielt die Ahmadiyya Muslim Jamaat (AMJ) eine einzigartige Rolle.
+1889 in Indien gegründet, stellt sie mit ihren vielen zehn Millionen Mitgliedern in über 204 Ländern weltweit die größte Gemeinschaft unter den organisierten Muslimen dar. In den einzelnen islamischen Staaten ist sie dennoch eine Minderheit.<br>
+Gleichzeitig ist die AMJ, die sich ausschließlich durch Spenden ihrer Mitglieder finanziert, die am schnellsten wachsende islamische Reformbewegung unserer Zeit. Ihr Hauptsitz befindet sich aktuell in London, Großbritannien. 
 				</p>
 				<p>
-					<a href="#one" data-rel="back"
-						class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back
-						to page "one"</a>
+					Sie ist die einzige islamische Bewegung, die mittlerweile seit mehr als 100 Jahren von einem rein spirituellen Khilafat geleitet wird. Der Kalif der AMJ, Seine Heiligkeit Hadhrat Mirza Masroor Ahmadatba, ist damit das weltweit wichtigste muslimische Oberhaupt.<br>
+Unter dem Vorsitz ihres Kalifen, der auf demokratische Art gewählt wird, tritt sie ein für die ursprünglichen Werte des Islam:<br>
+Barmherzigkeit gegenüber allen Menschen, absolute Gerechtigkeit, Gleichwertigkeit von Frau und Mann, Trennung von Religion und Staat, Beendigung gewalttätiger Aktionen im Namen der Religion sowie die Menschenrechte, wie sie im Koran festgelegt worden sind...<a href="http://www.ahmadiyya.de/ahmadiyya/einfuehrung/">hier weiterlesen</a> 
 				</p>
 			</div>
 			<!-- /content -->

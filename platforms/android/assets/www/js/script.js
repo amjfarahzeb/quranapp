@@ -1,5 +1,22 @@
 var xmlDoc = 0;
 
+$(document).on('pagebeforecreate', '[data-role="page"]', function(){     
+    setTimeout(function(){
+        $.mobile.loading( 'show', {
+	text: 'wird geladen...',
+	textVisible: true,
+	theme: 'b',
+	html: ""
+});
+    },1);    
+});
+
+$(document).on('pageshow', '[data-role="page"]', function(){  
+    setTimeout(function(){
+        $.mobile.loading('hide');
+    },300);      
+});
+
 $(function() {
 	//jQuery function contain overwritten because it was case sensitive
 	$.expr[":"].contains = $.expr.createPseudo(function(arg) {
@@ -79,20 +96,17 @@ $(function() {
      	//falls "ab Vers .." ausgewählt wurde
      	var anchor = $("#select-choice-b").val();
      	if(anchor != 1){
-     		setTimeout(function(){ $.mobile.silentScroll($("#ayat"+anchor).offset().top); }, 1500);
+     		window.setTimeout(function(){ $.mobile.silentScroll($("#ayat"+anchor).offset().top); }, 1500);
      	}
 	});
 	
 	//triggers the third page for searching
 	 $('#search').keyup(function() {
-	 	$("#wholeQuran").empty();
-
 	 	var key = $(this).val();
 	 	if(key.length >= 5){
+	 		$("#wholeQuran").empty();
 	 		$(xmlDoc).find("ayaat ayat_german:contains("+key+")").each(function(){
-	 			
 	 			var pNod = $(this).parent();
- 				
  					var arr = seperateAyatNo($(pNod).find("ayat_no").text());
 					$("#wholeQuran").append("<div><img src='img/quranverses/"+addZeros(arr[0])+"-"+addZeros(arr[1])+".png'>"
 		      			+"<p>"+$(pNod).find("ayat_no").text()+" - "+$(pNod).find('ayat_german').text()+"</p></div>");
